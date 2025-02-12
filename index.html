@@ -1,75 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlackJack - The Game</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/buttons.css" />
-    <script src="js/game.js" type="module"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackJack - The Game</title>
+  <link rel="stylesheet" href="css/buttons.css" />
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body>
-    <img
-      src="./assets/bg.jpg"
-      alt=""
-      srcset=""
-      style="
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        object-fit: cover;
-      "
-    />
-    <button id="fullscreen-btn" style="background-color: green">
-      Pantalla Completa
-    </button>
-
-    <div id="cards-deck">
-      <img src="./assets/cards/BACK.png" alt="" />
-    </div>
-
-    <div id="buttons" class="">
-      <div class="pixel2" id="ask-btn">Pedir Carta</div>
-      <div class="pixel2" id="stop-btn">Plantarse</div>
-    </div>
-
-    <div class="container-crupier">
-      <div class="card-container" id="container-crupier"></div>
-
-      <div class="score-container">
-        <p class="score" id="crupier-score">0</p>
-      </div>
-    </div>
-    <div class="container-player">
-      <div class="card-container" id="container-player"></div>
-      <div class="score-container">
-        <p class="score" id="player-score">0</p>
-      </div>
-    </div>
-    <script>
-      document
-        .getElementById("fullscreen-btn")
-        .addEventListener("click", () => {
-          if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-          } else {
-            if (document.exitFullscreen) {
-              document.exitFullscreen();
-            }
-          }
-        });
-    </script>
-  </body>
+    <script type="module" src="./js/menu.js"></script>
+</head>
+<body>
+  <img src="/assets/bg-menu.png" alt="" srcset="" class="bg">
+  <div class="pixel2" id="play-btn">JUGAR</div>
+  <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+</body>
 </html>

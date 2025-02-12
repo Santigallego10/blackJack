@@ -9,6 +9,8 @@ body {
   height: 100vh;
 }
 
+
+
 .container-crupier {
   display: flex;
   justify-content: center;
@@ -34,7 +36,12 @@ body {
   -webkit-box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.52);
   -moz-box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.52);
   box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.52);
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
+
+
 
 #buttons {
   display: none;
@@ -54,24 +61,42 @@ body {
   width: auto;
 }
 
+
+
+
+
+
 .card-container {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  //border: 2px solid red;
   height: 45%;
   width: 100%;
   margin-left: 25%;
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  white-space: nowrap; /* Evita el salto de línea */
+  scroll-behavior: smooth; /* Suaviza el desplazamiento */
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+
+.card-container::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en Chrome, Safari y Edge */
 }
 
 .card {
   height: 100%;
+  flex: 0 0 auto; /* Evita que las cartas se reduzcan */
 }
 
 .card img {
   height: 100%;
   width: auto;
 }
+
+.card:hover {
+  transform: translateY(-15px);
+}
+
 
 .score-container {
   font-family: "Micro 5", serif;
@@ -83,4 +108,25 @@ body {
 }
 
 .score {
+}
+
+.score-container {
+  width: 60px;
+  margin-left: -30px;
+  @media (max-width: 600px) {
+    margin-left: -80px;
+  }
+  background-color: #2b2b2b;
+  border: 4px solid #ffd700;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  font-family:  "Micro 5", serif;
+  box-shadow: 4px 4px 0px #aa0000, 8px 8px 0px #000;
+  color: #ffd700;
+}
+
+.score {
+  font-size: 48px;
+  text-shadow: 2px 2px 0px #aa0000, 4px 4px 0px #000;
 }

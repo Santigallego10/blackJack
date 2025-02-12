@@ -1,0 +1,27 @@
+.bg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    background-image: url(./assets/bg-menu.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.pixel2 {
+    display: flex;
+    width:35%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    align-self: center;
+    margin-top: 48.5vh;
+    font-size: 4.5em;
+}

@@ -2,8 +2,9 @@ import CARDS from "./cards.js";
 //play a soung in the bg on loop, 50% volume
 const bgMusic = new Audio('./assets/sounds/music/bg-music.mp3');
 const giveCardSound = new Audio('./assets/sounds/effects/give-card.mp3');
+const winSound = new Audio('./assets/sounds/effects/winner.mp3');
 
-bgMusic.volume = 0.3;
+bgMusic.volume = 0.0;
 bgMusic.loop = true;
 
 document.addEventListener('click', () => {
@@ -68,7 +69,7 @@ function displayCard(role, card) {
                 <img src="./${card.img}" alt="Card" class="card-img">
             </div>`;
   giveCardSound.play();
-  container.append(card_html);
+  container.prepend(card_html);
 }
 
 async function giveCard(role, qty) {
@@ -156,6 +157,9 @@ function compareScores() {
 }
 
 function endGame() {
+  if(CURRENT_GAME.winner === "player"){
+    winSound.play();
+  }
   toggleButtons("hide");
   GAMES.push(JSON.parse(JSON.stringify(CURRENT_GAME)));
 
@@ -177,6 +181,7 @@ function toggleButtons(action) {
 }
 
 async function start() {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   console.table(GAMES);
   console.log(GAMES)
   CURRENT_GAME = JSON.parse(JSON.stringify(new_game));
