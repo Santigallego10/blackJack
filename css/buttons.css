@@ -5,7 +5,7 @@
   height: auto;
   margin: 10px;
   font-family: "Micro 5", serif;
-  margin-right: 15 px;
+  margin-right: 25 px;
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -19,6 +19,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.pixel,.pixel2:hover {
+scale: 1.1;
 }
 
 .pixel:active,

@@ -1,4 +1,15 @@
 import CARDS from "./cards.js";
+//play a soung in the bg on loop, 50% volume
+const bgMusic = new Audio('./assets/sounds/music/bg-music.mp3');
+const giveCardSound = new Audio('./assets/sounds/effects/give-card.mp3');
+
+bgMusic.volume = 0.3;
+bgMusic.loop = true;
+
+document.addEventListener('click', () => {
+  bgMusic.play();
+}, { once: true });
+
 
 let GAMES = [];
 let CURRENT_GAME = null;
@@ -56,6 +67,7 @@ function displayCard(role, card) {
       : `<div class="card">
                 <img src="./${card.img}" alt="Card" class="card-img">
             </div>`;
+  giveCardSound.play();
   container.append(card_html);
 }
 
