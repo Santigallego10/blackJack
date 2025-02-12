@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background: url("/assets/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.1 );
+}
+
+
+.container-crupier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.container-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#cards-deck {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 25%;
+  position: absolute;
+  top: 37%;
+  margin-left: 15px;
+  -webkit-box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.52);
+  box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.52);
+}
+
+#buttons{
+  display: none;
+}
+
+#buttons.active {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 25%;
+  position: absolute;
+  top: 30%;
+  right: 15px;
+}
+#buttons img {
+  height: 100%;
+  width: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  //border: 2px solid red;
+  height: 45%;
+  width: 100%;
+  margin-left: 25%;
+}
+
+.card {
+  height: 100%;
+}
+
+.card img {
+  height: 100%;
+  width: auto;
+}
+
+.score-container {
+  font-family: "Micro 5", serif;
+  font-size: 5em;
+  position: absolute;
+  display: flex;
+  left: 20%;
+  justify-content: left;
+}
+
+.score {
+}
